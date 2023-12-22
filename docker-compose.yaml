@@ -1,0 +1,14 @@
+version: '3.2'
+
+services:
+  transmission-block-thunder:
+    image: "azicen/transmission-block-thunder:latest"
+    container_name: transmission-block-thunder
+    environment:
+      TZ: "Asia/Shanghai"
+    ports:
+      - "9091:9091"
+      - "51413:51413"
+    volumes:
+      - ./data/config:/app/config
+      - ./data/downloads:/downloads
